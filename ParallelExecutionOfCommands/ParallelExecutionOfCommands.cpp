@@ -2,7 +2,7 @@
 // This aplication aims to provide functionality for parallel execution of Behat commands.
 //
 
-#include "stdafx.h"
+//#include "stdafx.h"
 #include <iostream>
 #include <string>
 #include <cstring>
