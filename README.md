@@ -5,5 +5,5 @@ This is console application wich provides functionality for parallel execution o
 
 For compilation of the program should be used the following command line:
 
-g++ -std=c++11 ConsoleApplication2.cpp
+g++ -std=c++11 ParallelExecutionOfCommands.cpp
 
