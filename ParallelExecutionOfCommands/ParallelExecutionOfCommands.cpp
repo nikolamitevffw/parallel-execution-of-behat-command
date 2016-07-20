@@ -42,7 +42,7 @@ int main()
 	string result_Command_String;
 	thread thread_Array[100];
 	
-	//Getting users prefert execution type.
+	// Getting users prefert execution type.
 	menu_Option = menu();
 
 	// Entering values for the variables.
