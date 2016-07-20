@@ -6,7 +6,12 @@ Aplication executes Behat command - bin/behat -p {profile} features/{folder/file
 
 {profile} and {folder/file.feature} are entered from the user alongside with the number of process he/she wants to run with the command.
 
-For compilation of the program should be used the following command line:
+For compilation of the program should be used one of the following command line.
 
-g++ -std=c++11 ParallelExecutionOfCommands.cpp
+* When using process to handle command execution:
+  g++ -std=c++11 ParallelExecutionOfCommands.cpp
+
+* When using threads to handle command execution:
+  g++ -std=c++11 ParallelExecutionOfCommands.cpp -pthread
+
 
