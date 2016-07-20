@@ -36,21 +36,17 @@ int main()
 	result_Command_String = behat_Bin + behat_Profile + " features/" + behat_Feature_Folder;
 	strcpy(command, result_Command_String.c_str());
 
-	cout << "You will execute " << processes_Count << " processes with the following command: " << command << ".\n";
+	cout << "You will execute " << processes_Count << " processes/threads with the following command: " << command << ".\n";
 
 	// Creating threads to handle the command execution.
 	for (size_t i = 0; i < processes_Count; i++)
 	{
 		thread_Array[i] = thread(system, command);
-		
-	}
-	/*for (size_t i = 0; i < processes_Count; i++)
-	{
 		thread_Array[i].join();
-	}*/
+	}
 	for (size_t i = 0; i < sizeof(thread_Array); i++)
 	{
-		thread_Array[i].join();
+		//thread_Array[i].join();
 		thread_Array[i].detach();
 	}
 
