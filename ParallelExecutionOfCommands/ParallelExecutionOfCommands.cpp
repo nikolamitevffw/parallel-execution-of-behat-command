@@ -22,10 +22,9 @@ int main()
 	string behat_Bin = "bin/behat -p ";
 	string result_Command_String;
 	thread thread_Array[100];
-	bool parallel_Execution = true;
-	
+		
 	// Entering values for the variables.
-	cout << "Enter number of processes you want to execute: ";
+	cout << "Enter number of processes/threads you want to execute: ";
 	cin >> processes_Count;
 	cout << "Enter Behat profile you want to use: ";
 	cin >> behat_Profile;
@@ -42,14 +41,12 @@ int main()
 	for (size_t i = 0; i < processes_Count; i++)
 	{
 		thread_Array[i] = thread(system, command);
-		thread_Array[i].join();
 	}
 	for (size_t i = 0; i < sizeof(thread_Array); i++)
 	{
-		//thread_Array[i].join();
+		thread_Array[i].join();
 		thread_Array[i].detach();
 	}
-
 
 	//// Creating process for execution of the command.
 	//pid_t pids[processes_Count];
