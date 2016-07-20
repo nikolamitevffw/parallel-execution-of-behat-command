@@ -7,7 +7,8 @@
 #include <string>
 #include <cstring>
 #include <stdlib.h>
-#include <unistd.h>
+//#include <unistd.h>
+#include <thread>
 
 using namespace std;
 
@@ -20,7 +21,9 @@ int main()
 	string behat_Feature_Folder;
 	string behat_Bin = "bin/behat -p ";
 	string result_Command_String;
-
+	thread thread_Array[100];
+	bool parallel_Execution = true;
+	
 	// Entering values for the variables.
 	cout << "Enter number of processes you want to execute: ";
 	cin >> processes_Count;
@@ -35,22 +38,28 @@ int main()
 
 	cout << "You will execute " << processes_Count << " processes with the following command: " << command << ".\n";
 
-
-	// Creating process for execution of the command.
-	pid_t pids[processes_Count];
+	// Creating threads to handle the command execution.
 	for (size_t i = 0; i < processes_Count; i++)
 	{
-		if ((pids[i] = fork()) < 0)
-		{
-			perror("Process was unable to be created.");
-			abort();
-		}
-		else if (pids[i] == 0)
-		{
-			system(command);
-			exit(0);
-		}
+		thread_Array[i] = thread(system, command);
 	}
+
+
+	//// Creating process for execution of the command.
+	//pid_t pids[processes_Count];
+	//for (size_t i = 0; i < processes_Count; i++)
+	//{
+	//	if ((pids[i] = fork()) < 0)
+	//	{
+	//		perror("Process was unable to be created.");
+	//		abort();
+	//	}
+	//	else if (pids[i] == 0)
+	//	{
+	//		system(command);
+	//		exit(0);
+	//	}
+	//}
 
     return 0;
 }
