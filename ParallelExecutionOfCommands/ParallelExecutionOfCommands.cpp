@@ -73,7 +73,7 @@ int main()
 			thread_Array[i].detach();
 		}
 	}
-	else
+	else if (menu_Option = 2)
 	{	// Successively execution mode.
 		for (size_t i = 0; i < processes_Count; i++)
 		{
