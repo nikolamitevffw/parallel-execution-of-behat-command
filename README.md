@@ -14,4 +14,4 @@ For compilation of the program should be used one of the following command line.
 * When using threads to handle command execution:
   g++ -std=c++11 ParallelExecutionOfCommands.cpp -pthread
 
-
+Threre is possibility for parallel and successivly execution of command multiple times.
