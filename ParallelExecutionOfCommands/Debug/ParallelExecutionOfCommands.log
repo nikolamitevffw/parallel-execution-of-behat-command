@@ -1,3 +1,5 @@
 ﻿  ParallelExecutionOfCommands.cpp
-  ParallelExecutionOfCommands.vcxproj -> C:\Users\nmitev\Documents\Visual Studio 2015\Projects\ParallelExecutionOfCommands\Debug\ParallelExecutionOfCommands.exe
-  ParallelExecutionOfCommands.vcxproj -> C:\Users\nmitev\Documents\Visual Studio 2015\Projects\ParallelExecutionOfCommands\Debug\ParallelExecutionOfCommands.pdb (Full PDB)
+c:\users\nmitev\documents\visual studio 2015\projects\parallelexecutionofcommands\parallelexecutionofcommands\parallelexecutionofcommands.cpp(66): warning C4018: '<': signed/unsigned mismatch
+c:\users\nmitev\documents\visual studio 2015\projects\parallelexecutionofcommands\parallelexecutionofcommands\parallelexecutionofcommands.cpp(78): warning C4018: '<': signed/unsigned mismatch
+c:\users\nmitev\documents\visual studio 2015\projects\parallelexecutionofcommands\parallelexecutionofcommands\parallelexecutionofcommands.cpp(58): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: see declaration of 'strcpy'
