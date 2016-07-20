@@ -43,6 +43,10 @@ int main()
 	{
 		thread_Array[i] = thread(system, command);
 	}
+	for (size_t i = 0; i < sizeof(thread_Array); i++)
+	{
+		thread_Array[i].detach();
+	}
 
 
 	//// Creating process for execution of the command.
