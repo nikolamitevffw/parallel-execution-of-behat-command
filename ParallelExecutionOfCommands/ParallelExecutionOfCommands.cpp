@@ -42,6 +42,7 @@ int main()
 	for (size_t i = 0; i < processes_Count; i++)
 	{
 		thread_Array[i] = thread(system, command);
+		thread_Array[i].join();
 	}
 	for (size_t i = 0; i < sizeof(thread_Array); i++)
 	{
