@@ -60,8 +60,9 @@ int main()
 	cout << "You will execute " << processes_Count << " processes/threads with the following command: " << command << ".\n";
 
 	// Creating threads to handle the command execution.
-	if (menu_Option = 1)
+	switch (menu_Option)
 	{
+	case 1:
 		// Parallel execution mode.
 		for (size_t i = 0; i < processes_Count; i++)
 		{
@@ -72,9 +73,9 @@ int main()
 			thread_Array[i].join();
 			thread_Array[i].detach();
 		}
-	}
-	else if (menu_Option = 2)
-	{	// Successively execution mode.
+		break;
+	case 2:
+		// Successively execution mode.
 		for (size_t i = 0; i < processes_Count; i++)
 		{
 			thread_Array[i] = thread(system, command);
@@ -84,8 +85,10 @@ int main()
 		{
 			thread_Array[i].detach();
 		}
+		break;
+	default:
+		break;
 	}
-	
 
 	//// Creating process for execution of the command.
 	//pid_t pids[processes_Count];
